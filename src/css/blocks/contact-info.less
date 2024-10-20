@@ -1,0 +1,168 @@
+.contact-info {
+    padding-bottom: 120px;
+
+    @media screen and (max-width: @ipad) {
+        padding-bottom: 80px;
+    }
+
+    &__inner {
+        max-width: 670px;
+
+        @media screen and (max-width: @ipad) {
+            max-width: 410px;
+        }
+    }
+
+    &__row {
+        margin-left : -5px;
+        margin-right: -5px;
+    }
+
+    &__col {
+        padding-left : 5px;
+        padding-right: 5px;
+    }
+
+    &__btns-block {
+        padding-top: 52px;
+        text-align : center;
+    }
+
+    &__for-input {
+        margin-bottom: 8px;
+        position     : relative;
+    }
+}
+
+// Input
+.contact-info__input {
+    border       : 1px solid #B2BFCF;
+    font-weight  : 400;
+    color        : @color-text;
+    height       : 48px;
+    width        : 100%;
+    font-size    : 16px;
+    padding-left : 14px;
+    padding-right: 14px;
+    border-radius: 12px;
+    background   : #FDFBDD;
+
+    @media screen and (max-width: @ipad) {
+        width        : calc(100% - 12px);
+        border-radius: 14px;
+        margin-right : 12px;
+    }
+
+    @media screen and (max-width: @ipad) {
+        border       : 0;
+        padding      : 14px 50px 14px 20px;
+        border-radius: 14px;
+
+        margin-right: 12px;
+        background  : #FDFBDD;
+    }
+
+    &::-webkit-input-placeholder {
+        color  : #B0B0B0;
+        opacity: 1;
+    }
+
+    &::-moz-placeholder {
+        color  : #B0B0B0;
+        opacity: 1;
+    }
+
+    /* Firefox 19+ */
+    &:-moz-placeholder {
+        color  : #B0B0B0;
+        opacity: 1;
+    }
+
+    /* Firefox 18- */
+    &:-ms-input-placeholder {
+        color  : #B0B0B0;
+        opacity: 1;
+    }
+}
+
+.contact-info__input--validity,
+.contact-info__input:valid {
+    border-color: #1A252F;
+    background  : #ffffff;
+    color       : @color-text;
+
+    @media screen and (max-width: @ipad) {
+        background: #F3F5F5;
+
+    }
+}
+
+.contact-info__input:disabled {
+    background: #ffffff;
+    cursor    : not-allowed;
+
+    @media screen and (max-width: @ipad) {
+        background: #F3F5F5;
+    }
+}
+
+.contact-info__label-input {
+    display: none;
+}
+
+.contact-info__label-input span {
+    display: none;
+}
+
+.contact-info__input--phone:disabled {
+
+    &::-webkit-input-placeholder {
+        opacity: 0;
+    }
+
+    &::-moz-placeholder {
+        opacity: 0;
+    }
+
+    /* Firefox 19+ */
+    &:-moz-placeholder {
+        opacity: 0;
+    }
+
+    /* Firefox 18- */
+    &:-ms-input-placeholder {
+        opacity: 0;
+    }
+}
+
+.contact-info__input--phone:disabled+.contact-info__label-input {
+    display       : block;
+    position      : absolute;
+    font-size     : 16px;
+    font-weight   : 400;
+    color         : #B2BFCF;
+    left          : 14px;
+    top           : 50%;
+    transform     : translateY(-50%);
+    pointer-events: none;
+}
+
+.contact-info__input--phone:disabled+.contact-info__label-input span {
+    display: block;
+}
+
+.contact-info__input--validity+.contact-info__label-input,
+.contact-info__input:valid+.contact-info__label-input {
+    @media screen and (max-width: @ipad) {
+        display        : block;
+        position       : absolute;
+        background     : url(../images/icons/mob-select-arrow-ok.svg) no-repeat center;
+        background-size: contain;
+        width          : 24px;
+        height         : 24px;
+        top            : 0;
+        bottom         : 0;
+        margin         : auto;
+        right          : 0;
+    }
+}

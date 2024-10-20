@@ -1,0 +1,22 @@
+.map {
+    display: none;
+    width     : 100%;
+    height    : 600px;
+    background: #cccccc;
+    margin-top: 40px;
+
+    @media screen and (max-width: @ipad) {
+        margin-top: 24px;
+        height: 300px;
+    }
+
+    @media screen and (max-width: @mob) {
+        margin-top: 20px;
+        height: 240px;
+    }
+
+    &__container {
+        width : 100%;
+        height: 100%;
+    }
+}

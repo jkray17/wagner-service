@@ -1,0 +1,42 @@
+@@include('./main/head.html', {
+"title": "Ошибка"
+})
+@@include('./main/header.html',{
+"classmain": "main--error"
+})
+
+<section class="error-message">
+    <div class="error-message__inner inner">
+        <div class="error-message__row row">
+            <div class="error-message__col col offset-3 col-3 offset-md-2 col-4 offset-sm-0 col-sm-12">
+                <h1 class="error-message__title">Произошла <br><span>ошибка :(</span></h1>
+            </div>
+            <div class="error-message__col col col-4 col-sm-12">
+                <img src="./images/error.png" alt="Error" class="error-message__img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<form action="" method="post">
+
+    <div class="error">
+        <div class="inner error__inner">
+            <p class="error__text">Пожалуйста оставьте нам номер телефона и мы с вами свяжемся в ближайшее время!</p>
+            <div class="error__form">
+                <div class="error__for-input">
+                    <input type="tel" name="phone" class="error__input" placeholder="+ 7 (___) ___ __ __" value="+ 7 999 233 58 80" required>
+                    <label class="error__label-input"></label>
+                </div>
+
+                <div class="error__btns-block">
+                    <a href="#succes-send" class="btn-send js-call-popup">Отправить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+@@include('./main/footer.html')

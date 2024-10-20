@@ -1,0 +1,17 @@
+.inner {
+  position : relative;
+  max-width: 1240px; //1280px + 30*2px
+  height   : 100%;
+  margin   : 0 auto;
+  padding  : 0 30px;
+
+  @media screen and (max-width: @mob) {
+    padding: 0 20px;
+  }
+}
+
+.inner:after {
+  content: '';
+  display: block;
+  clear  : both;
+}

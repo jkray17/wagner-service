@@ -1,0 +1,350 @@
+@@include('./main/head.html', {
+"title": "Шаг №2"
+})
+@@include('./main/header.html',{
+"classmain": "main--second-step"
+})
+
+<section class="promo">
+    <div class="promo__inner inner">
+        <div class="promo__grid">
+            <div class="promo__item promo__item--title ">
+                <h1 class="promo__title">Запись на сервис <br> за <span>3 минуты online</span></h1>
+            </div>
+            <div class="promo__item promo__item--img">
+                <img src="./images/clock-promo.png" alt="Clock" class="promo__photo-bg">
+            </div>
+            <div class="promo__btns-block">
+                <a href="#steps" class="btn-sign-up js-link-anchor">Записаться</a>
+            </div>
+            <div class="promo__item promo__item--brands">
+                <img src="./images/brands-line.png" alt="Brands" class="promo__brands">
+            </div>
+        </div>
+    </div>
+</section>
+
+<form action="" method="post">
+
+    <div class="steps" id="steps">
+        <div class="inner inner__steps">
+            <div class="steps__block">
+                <div class="steps__step steps__step--active">1 шаг</div>
+                <div class="steps__step steps__step--active">2 шаг</div>
+                <div class="steps__step">3 шаг</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="choise-address">
+        <div class="inner choise-address__inner">
+            <h2 class="choise-address__title">Выберите адрес</h2>
+            <div class="choise-address__block">
+                <div class="choise-address__for-select select2 select2-choise-address">
+                    <select name="address" data-placeholder="Дилерский центр" required>
+                        <option value="">Дилерский центр</option>
+                        <option value="Таллинский" data-name="Таллинский" data-address="(Таллинское шоссе, д. 157, лит. А)" data-img="./images/icons/dealer-tallinsky-icons">Таллинский</option>
+                        <option value="Пулково" data-name="Пулково" data-address="(Стартовая ул., 5А)" data-img="./images/icons/dealer-pulkovo-icons">Пулково</option>
+                        <option value="Лахта" data-name="Лахта" data-address="(ул. Оптиков, 3А)" data-img="./images/icons/dealer-lahta-icons">Лахта</option>
+                        <option value="Выборгский" data-name="Выборгский" data-address="(Выборгское шоссе, 352A)" data-img="./images/icons/dealer-viborgsky-icons">Выборгский</option>
+                    </select>
+                </div>
+            </div>
+            <div class="choise-address__btns-block">
+                <a href="#" class="choise-address__btn js-open-map" data-status="not">Посмотреть на карте</a>
+            </div>
+
+        </div>
+        <div class="map">
+            <div class="map__container" id="map"></div>
+        </div>
+    </div>
+
+    <div class="choise-master-and-time">
+        <div class="inner">
+            <h2 class="choise-master-and-time__title">Выберите мастера и время</h2>
+        </div>
+        <div class="inner choise-master-and-time__inner">            
+            <div class="choise-master-and-time__btns-block">
+
+                <div class="btn-choise-master btn-choise-master--disabled" id="open-choise-master">
+                    <div class="btn-choise-master__info">
+                        <div class="btn-choise-master__photo-block">
+                            <img src="./images/master-empty.png" alt="Master" class="btn-choise-master__photo">
+                        </div>
+                        <div class="btn-choise-master__text">
+                            <p class="btn-choise-master__name">Имя Фамилия</p>
+                            <p class="btn-choise-master__date">Ближайшее доступное время <br>Дата – Время</p>
+                        </div>
+                    </div>
+                </div>                
+
+            </div>
+        </div>
+
+        <div class="choise-master-and-time__block choise-master-and-time__block--hide" id="choise-master-block">
+
+            <div class="inner choise-master-and-time__big-inner">
+
+                <div class="choise-date">
+                    <div class="choise-date__month">Май 2021</div>
+
+                    <div class="choise-date__slider-block">
+                        <div id="choise-date-slider-prev" class="choise-date__nav choise-date__nav--prev"></div>
+
+                        <div class="choise-date__slider choise-date__slider--hide" id="choise-date-slider">
+                            <div class="choise-date__for-radio">
+                                <input class="choise-date__radio" id="160521" type="radio" name="choise-date" value="16/05/21" disabled>
+                                <label for="160521" class="choise-date__label">
+                                    <div class="choise-date__label-day">16</div>
+                                    <div class="choise-date__label-day-week">Вс.</div>
+                                </label>
+                            </div>
+                            <div class="choise-date__for-radio">
+                                <input class="choise-date__radio" id="170521" type="radio" name="choise-date" value="17/05/21" disabled>
+                                <label for="170521" class="choise-date__label">
+                                    <div class="choise-date__label-day">17</div>
+                                    <div class="choise-date__label-day-week">Пн.</div>
+                                </label>
+                            </div>
+                            <div class="choise-date__for-radio">
+                                <input class="choise-date__radio" id="180521" type="radio" name="choise-date" value="18/05/21" disabled>
+                                <label for="180521" class="choise-date__label">
+                                    <div class="choise-date__label-day">18</div>
+                                    <div class="choise-date__label-day-week">Вт.</div>
+                                </label>
+                            </div>
+                            <div class="choise-date__for-radio">
+                                <input class="choise-date__radio" id="190521" type="radio" name="choise-date" value="19/05/21" disabled>
+                                <label for="190521" class="choise-date__label">
+                                    <div class="choise-date__label-day">19</div>
+                                    <div class="choise-date__label-day-week">Ср.</div>
+                                </label>
+                            </div>
+                            <div class="choise-date__for-radio">
+                                <input class="choise-date__radio" id="200521" type="radio" name="choise-date" value="20/05/21" checked="checked">
+                                <label for="200521" class="choise-date__label">
+                                    <div class="choise-date__label-day">20</div>
+                                    <div class="choise-date__label-day-week">Чт.</div>
+                                </label>
+                            </div>
+                            <div class="choise-date__for-radio">
+                                <input class="choise-date__radio" id="210521" type="radio" name="choise-date" value="21/05/21">
+                                <label for="210521" class="choise-date__label">
+                                    <div class="choise-date__label-day">21</div>
+                                    <div class="choise-date__label-day-week">Пт.</div>
+                                </label>
+                            </div>
+                            <div class="choise-date__for-radio">
+                                <input class="choise-date__radio" id="220521" type="radio" name="choise-date" value="22/05/21">
+                                <label for="220521" class="choise-date__label">
+                                    <div class="choise-date__label-day">22</div>
+                                    <div class="choise-date__label-day-week">Сб.</div>
+                                </label>
+                            </div>
+                            <div class="choise-date__for-radio">
+                                <input class="choise-date__radio" id="230521" type="radio" name="choise-date" value="23/05/21">
+                                <label for="230521" class="choise-date__label">
+                                    <div class="choise-date__label-day">23</div>
+                                    <div class="choise-date__label-day-week">Вс.</div>
+                                </label>
+                            </div>
+                            <div class="choise-date__for-radio">
+                                <input class="choise-date__radio" id="240521" type="radio" name="choise-date" value="24/05/21">
+                                <label for="240521" class="choise-date__label">
+                                    <div class="choise-date__label-day">24</div>
+                                    <div class="choise-date__label-day-week">Пт.</div>
+                                </label>
+                            </div>
+                            <div class="choise-date__for-radio">
+                                <input class="choise-date__radio" id="250521" type="radio" name="choise-date" value="25/05/21">
+                                <label for="250521" class="choise-date__label">
+                                    <div class="choise-date__label-day">25</div>
+                                    <div class="choise-date__label-day-week">Пт.</div>
+                                </label>
+                            </div>
+                            <div class="choise-date__for-radio">
+                                <input class="choise-date__radio" id="260521" type="radio" name="choise-date" value="26/05/21">
+                                <label for="260521" class="choise-date__label">
+                                    <div class="choise-date__label-day">26</div>
+                                    <div class="choise-date__label-day-week">Пт.</div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="choise-date-slider-next" class="choise-date__nav choise-date__nav--next"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="choise-master">
+                    <div class="choise-master__item">
+                        <div class="choise-master__container">
+                            <div class="choise-master__photo-block">
+                                <img src="./images/master-01.png" alt="Photo" class="choise-master__photo">
+                            </div>
+                            <div class="choise-master__info">
+                                <div class="choise-master__text">
+                                    <p class="choise-master__name">Иван Петров</p>
+                                    <p class="choise-master__note">Ближайшее доступное время</p>
+                                </div>
+                                <div class="choise-master__times">
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master1-11-15" type="radio" name="choise-master" value="master1-11-15">
+                                        <label for="master1-11-15" class="choise-master__label">11:15</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master1-12-25" type="radio" name="choise-master" value="master1-12-25">
+                                        <label for="master1-12-25" class="choise-master__label">12:25</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master1-13-10" type="radio" name="choise-master" value="master1-13-10">
+                                        <label for="master1-13-10" class="choise-master__label">13:10</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master1-14-10" type="radio" name="choise-master" value="master1-14-10">
+                                        <label for="master1-14-10" class="choise-master__label">14:10</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master1-14-50" type="radio" name="choise-master" value="master1-14-50">
+                                        <label for="master1-14-50" class="choise-master__label">14:50</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master1-15-15" type="radio" name="choise-master" value="master1-15-15">
+                                        <label for="master1-15-15" class="choise-master__label">15:15</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master1-16-35" type="radio" name="choise-master" value="master1-16-35">
+                                        <label for="master1-16-35" class="choise-master__label">16:35</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master1-19-10" type="radio" name="choise-master" value="master1-19-10">
+                                        <label for="master1-19-10" class="choise-master__label">19:10</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="choise-master__item">
+                        <div class="choise-master__container">
+                            <div class="choise-master__photo-block">
+                                <img src="./images/master-02.png" alt="Photo" class="choise-master__photo">
+                            </div>
+                            <div class="choise-master__info">
+                                <div class="choise-master__text">
+                                    <p class="choise-master__name">Сергей Иванов</p>
+                                    <p class="choise-master__note">Ближайшее доступное время</p>
+                                </div>
+                                <div class="choise-master__times">
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master2-11-15" type="radio" name="choise-master" value="master2-11-15">
+                                        <label for="master2-11-15" class="choise-master__label">11:15</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master2-12-25" type="radio" name="choise-master" value="master2-12-25">
+                                        <label for="master2-12-25" class="choise-master__label">12:25</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master2-13-10" type="radio" name="choise-master" value="master2-13-10">
+                                        <label for="master2-13-10" class="choise-master__label">13:10</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master2-14-10" type="radio" name="choise-master" value="master2-14-10">
+                                        <label for="master2-14-10" class="choise-master__label">14:10</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master2-14-50" type="radio" name="choise-master" value="master2-14-50">
+                                        <label for="master2-14-50" class="choise-master__label">14:50</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master2-15-15" type="radio" name="choise-master" value="master2-15-15">
+                                        <label for="master2-15-15" class="choise-master__label">15:15</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master2-16-35" type="radio" name="choise-master" value="master2-16-35">
+                                        <label for="master2-16-35" class="choise-master__label">16:35</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master2-19-10" type="radio" name="choise-master" value="master2-19-10">
+                                        <label for="master2-19-10" class="choise-master__label">19:10</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="choise-master__item">
+                        <div class="choise-master__container">
+                            <div class="choise-master__photo-block">
+                                <img src="./images/master-03.png" alt="Photo" class="choise-master__photo">
+                            </div>
+                            <div class="choise-master__info">
+                                <div class="choise-master__text">
+                                    <p class="choise-master__name">Павел Егоров</p>
+                                    <p class="choise-master__note">Ближайшее доступное время</p>
+                                </div>
+                                <div class="choise-master__times">                                    
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master3-15-15" type="radio" name="choise-master" value="master3-15-15">
+                                        <label for="master3-15-15" class="choise-master__label">15:15</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master3-16-35" type="radio" name="choise-master" value="master3-16-35">
+                                        <label for="master3-16-35" class="choise-master__label">16:35</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master3-19-10" type="radio" name="choise-master" value="master3-19-10">
+                                        <label for="master3-19-10" class="choise-master__label">19:10</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="choise-master__item">
+                        <div class="choise-master__container">
+                            <div class="choise-master__photo-block">
+                                <img src="./images/master-04.png" alt="Photo" class="choise-master__photo">
+                            </div>
+                            <div class="choise-master__info">
+                                <div class="choise-master__text">
+                                    <p class="choise-master__name">Константин Павелюк</p>
+                                    <p class="choise-master__note">Ближайшее доступное время</p>
+                                </div>
+                                <div class="choise-master__times">                                    
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master4-09-30" type="radio" name="choise-master" value="master4-09-30">
+                                        <label for="master4-09-30" class="choise-master__label">09:30</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master4-10-05" type="radio" name="choise-master" value="master4-10-05">
+                                        <label for="master4-10-05" class="choise-master__label">10:05</label>
+                                    </div>
+                                    <div class="choise-master__for-radio">
+                                        <input class="choise-master__radio" id="master4-19-10" type="radio" name="choise-master" value="master4-19-10">
+                                        <label for="master4-19-10" class="choise-master__label">19:10</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="inner choise-master-and-time__inner">
+            <div class="choise-master-and-time__btns-block-next">
+                <button type="button" class="btn-next" disabled>Далее</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+@@include('./main/footer.html')

@@ -1,0 +1,51 @@
+.success-promo {
+    padding-top   : 102px;
+    padding-bottom: 60px;
+
+    @media screen and (max-width: @ipad) {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    @media screen and (max-width: @mob) {
+        padding-top: 40px;
+        padding-bottom: 30px;
+        
+    }
+
+    &__row {
+        align-content: center;
+        align-items  : center;
+    }
+
+    &__col--img {
+        @media screen and (max-width: @ipad) {
+            display: none;
+        }
+    }
+
+    &__title {
+        padding-bottom: 0;        
+
+        @media screen and (max-width: @ipad) {
+            text-align: center;
+        }
+    }
+
+    &__img {
+        margin-left: auto;        
+    }
+
+    &__brands {
+        padding-top: 30px;
+
+        @media screen and (max-width: @ipad) {
+            display: none;
+        }
+    }
+    &__brands-img {
+        @media screen and (max-width: @mob) {
+            margin: auto;
+        }
+    }
+}

@@ -1,0 +1,146 @@
+.choise-car {
+    padding-bottom: 125px;
+
+    @media screen and (max-width: @ipad) {
+        padding-bottom: 80px;
+    }
+    @media screen and (max-width: @mob) {
+        padding-bottom: 80px;
+    }
+
+    &__inner {
+        max-width: 940px;
+
+        @media screen and (max-width: @ipad) {
+            max-width: 410px;
+        }
+    }
+
+    &__title {
+        padding-bottom: 40px;
+        text-align: center;
+
+        @media screen and (max-width: @ipad) {
+            padding-bottom: 25px;
+        }
+    }
+
+    &__row {
+        align-content: center;
+        align-items: center;
+    }
+
+    &__col--inputs {
+        flex-grow: 1;
+    }
+    &__col--btn {
+        width: 260px;
+
+        @media screen and (max-width: @ipad) {
+            width: 293px;
+            margin: auto;
+            max-width: 100%;
+            padding-top: 52px;
+        }
+    }
+    &__col-agree {
+        padding-top: 25px;
+
+        @media screen and (max-width: @ipad) {
+            width: 293px;
+            max-width: 100%;
+            margin: auto;
+        }
+    }
+
+    &__inputs-block {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    &__inputs-block-col {
+        padding-left: 5px;
+        padding-right: 5px;
+
+        @media screen and (max-width: @ipad) {
+            padding-bottom: 8px;
+        }
+    }
+}
+
+.choise-car__checkbox {
+    display   : block;
+    visibility: visible;
+    opacity   : 0;
+    position  : absolute;
+}
+
+.choise-car__label-checkbox {
+    cursor        : pointer;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    line-height: 1;
+
+    @media screen and (max-width: @ipad) {
+        align-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+.choise-car__check {
+    width         : 24px;
+    height        : 24px;
+    display       : block;
+    position      : relative;    
+    border: 2px solid #DF1B2A;
+    border-radius : 4px;
+    background: #FDFBDD;
+}
+
+.choise-car__check-text {
+    max-width     : calc(100% - 25px);
+    color: #B0B0B0;    
+    font-size     : 13px;
+    line-height: 1.5;
+    padding-left  : 12px;    
+
+    a {
+        color: #979797;
+        font-weight: 700;
+
+        @media screen and (max-width: @ipad) {
+            display: block;
+            padding-top: 8px;            
+            font-size: 14px;
+            line-height: 1;
+        }
+    }
+}
+
+.choise-car__checkbox:disabled + .choise-car__label-checkbox {
+    cursor: not-allowed;
+}
+.choise-car__checkbox:disabled + .choise-car__label-checkbox .choise-car__check {
+    background: #ffffff;
+}
+
+.choise-car__checkbox:checked + .choise-car__label-checkbox .choise-car__check {
+    background: #DF1B2A;
+}
+
+.choise-car__checkbox:checked + .choise-car__label-checkbox .choise-car__check:before {
+    content        : '';
+    display        : block;
+    width          : 16px;
+    height         : 12px;
+    position       : absolute;
+    left           : 0;
+    right          : 0;
+    top            : 0;
+    bottom         : 0;
+    margin         : auto;
+    background     : url(../images/icons/check.svg) no-repeat center;
+    background-size: contain;
+}

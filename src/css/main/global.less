@@ -1,0 +1,141 @@
+* {
+  margin    : 0;
+  padding   : 0;
+  border    : none;
+  box-sizing: border-box;
+  outline   : none;
+}
+
+main,
+article,
+section,
+footer,
+header,
+aside,
+canvas {
+  display: block;
+}
+
+section,
+header,
+footer {
+  position: relative;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-width       : 320px;
+  min-height      : 100%;
+  background-color: #ffffff;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size     : 18px;
+  line-height   : 1.3;
+  font-weight   : 400;
+  letter-spacing: 0em;
+  color         : @color-text;
+
+  position: relative;
+
+  @media screen and (max-width: @inner) { position: relative;}  /*inner - 1280px + 30px*2 = 1340px */
+  @media screen and (max-width: @tablet) { position: relative;}  /*lg - 1200px*/
+  @media screen and (max-width: @ipad) { position: relative;}  /*md - 960px*/
+  @media screen and (max-width: @mob) { position: relative;}  /*sm - 670px*/
+
+  @media screen and (min-width: 961px) { position: relative;}
+}
+
+/* + inner*/
+section:after {
+  content: '';
+  display: block;
+  clear  : both;
+}
+
+button,
+input,
+select {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+button {
+  cursor          : pointer;
+  background-color: transparent;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size     : 42px;
+  font-weight   : 400;
+  padding-bottom: 30px;
+  color: @color-black;
+
+  @media screen and (max-width: @ipad) {
+      font-size: 32px;
+      padding-bottom: 20px;
+  }
+
+  @media screen and (max-width: @mob) {
+    font-size: 28px;
+    padding-bottom: 30px;
+  }
+
+  span {
+      color: @color-red;
+      font-weight: 700;
+  }
+}
+
+h2 {
+  font-weight: 400;
+  font-size  : 30px;
+  padding-bottom: 40px;
+  text-align: center;
+
+  @media screen and (max-width: @ipad) {
+      font-weight: 600;
+      font-size: 24px;
+      padding-bottom: 30px;
+  }
+
+  @media screen and (max-width: @mob) {
+    font-size: 18px;
+  }
+}
+
+h3 {
+  font-weight: 400;
+  font-size  : 25px;
+  padding-bottom: 20px;
+
+  @media screen and (max-width: @ipad) {
+      font-size: 21px;
+  }
+
+  @media screen and (max-width: @mob) {
+    font-size: 16px;
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  display  : block;
+}
+
+a {
+  color: inherit;
+}

@@ -1,0 +1,105 @@
+.support-form-popup {
+    color: #ffffff;
+
+    &__text-block {
+        padding-top: 22px;
+
+        @media screen and (max-width: @ipad) {
+            padding-top   : 4px;
+            padding-bottom: 0;
+        }
+    }
+
+    &__title {
+        font-size     : 42px;
+        line-height   : 1.3;
+        text-align    : center;
+        font-weight   : 700;
+        padding-bottom: 40px;
+
+        @media screen and (max-width: @ipad) {
+            font-size: 32px;
+        }
+
+        @media screen and (max-width: @mob) {
+            font-size: 28px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__text {
+        font-size     : 24px;
+        line-height   : 1.5;
+        text-align    : center;
+        padding-bottom: 40px;
+        max-width     : 560px;
+        margin: auto;
+
+        @media screen and (max-width: @ipad) {
+            font-size  : 20px;
+            line-height: 1.3;
+        }
+
+        @media screen and (max-width: @mob) {
+            font-size: 18px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__btns-block {
+        text-align : center;
+        padding-top: 40px;
+
+        @media screen and (max-width: @ipad) {
+            padding-top: 60px;
+        }
+    }
+
+    &__for-input {
+        position: relative;
+        max-width: 350px;
+        margin: auto;
+    }
+}
+
+.support-form-popup__input {
+    border       : 0;
+    font-weight  : 400;
+    color        : @color-text;
+    height       : 48px;
+    width        : 100%;
+    font-size    : 18px;
+    padding-left : 20px;
+    padding-right: 20px;
+
+    background   : #F3F5F5;
+    opacity      : 0.8;
+    border-radius: 14px;
+    text-align: center;
+
+    &::-webkit-input-placeholder {
+        color      : @color-text;
+        opacity    : 1;
+        font-weight: 400;
+    }
+
+    &::-moz-placeholder {
+        color      : @color-text;
+        opacity    : 1;
+        font-weight: 400;
+    }
+
+    /* Firefox 19+ */
+    &:-moz-placeholder {
+        color      : @color-text;
+        opacity    : 1;
+        font-weight: 400;
+    }
+
+    /* Firefox 18- */
+    &:-ms-input-placeholder {
+        color      : @color-text;
+        opacity    : 1;
+        font-weight: 400;
+    }
+}

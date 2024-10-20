@@ -1,0 +1,55 @@
+.choise-master-and-time {
+    padding-bottom: 120px;
+
+    @media screen and (max-width: @ipad) {
+        padding-bottom: 80px;
+    }
+
+    &__inner {
+        max-width: 490px;
+
+        @media screen and (max-width: @ipad) {
+            max-width: 410px;
+        }
+    }
+
+    &__big-inner {
+        max-width: 864px;
+
+        @media screen and (max-width: @ipad) {
+            max-width: 525px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__btns-block-next {
+        max-width: 240px;
+        margin   : auto;
+
+        @media screen and (max-width: @ipad) {
+            max-width: 280px;
+        }
+    }
+
+    &__block {
+        margin-bottom: 60px;
+
+        @media screen and (max-width: @ipad) {
+            background   : #F3F5F5;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+        }
+
+        @media screen and (max-width: @mob) {
+            margin-bottom: 16px;
+        }
+
+        &--hide {
+            display: none;
+        }
+    }
+
+}

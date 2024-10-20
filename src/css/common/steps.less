@@ -1,0 +1,35 @@
+.steps {
+    padding-bottom: 76px;
+
+    @media screen and (max-width: @ipad) {
+        padding-bottom: 56px;
+    }
+
+    &__block {
+        display        : flex;
+        flex-wrap      : wrap;
+        justify-content: center;
+    }
+
+    &__step {
+        margin         : 0 4px 4px;
+        width          : 80px;
+        height         : 32px;
+        display        : inline-flex;
+        justify-content: center;
+        align-content  : center;
+        align-items    : center;
+        background     : #F3F5F5;
+        border-radius  : 7px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #B0B0B0;
+        line-height: 1;
+        cursor: pointer;
+
+        &--active {
+            background: #DF1B2A;
+            color: #ffffff;
+        }
+    }
+}

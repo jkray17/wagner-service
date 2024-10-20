@@ -1,0 +1,87 @@
+@@include('./main/head.html', {
+"title": "Успешная запись"
+})
+@@include('./main/header.html',{
+"classmain": "main--success"
+})
+
+<section class="success-promo">
+    <div class="success-promo__inner inner">
+        <div class="success-promo__row row">
+            <div class="success-promo__col col offset-2 col-3 col-lg-4 offset-md-0 col-md-12">
+                <h1 class="success-promo__title">Вы успешно <span>записались!</span></h1>
+                <div class="success-promo__brands">
+                    <img src="./images/brands-line.png" alt="Brands" class="success-promo__brands-img">
+                </div>
+            </div>
+            <div class="success-promo__col col offset-1 col-4 offset-lg-0 success-promo__col--img">
+                <img src="./images/clock-promo.png" alt="Error" class="success-promo__img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<form action="" method="post">
+
+    <div class="success-info">
+        <div class="success-info__inner inner">
+
+            <div class="success-info__container">
+
+                <div class="success-info__item">
+                    <div class="success-info__title-block">
+                        <p class="success-info__title">Когда нужно приехать?</p>
+                    </div>
+                    <div class="success-info__info-block">
+                        <p class="success-info__date"><strong>Вт, 28 апреля</strong> в <strong>09:30</strong></p>
+                    </div>
+                </div>
+
+                <div class="success-info__item">
+                    <div class="success-info__title-block">
+                        <p class="success-info__title">Кто будет обслуживать?</p>
+                    </div>
+                    <div class="success-info__info-block">
+                        <div class="success-info__master">
+                            <div class="success-info__master-photo-block">
+                                <img src="./images/master-pavelyuk.png" alt="Master" class="success-info__master-photo">
+                            </div>
+                            <div class="success-info__master-name">
+                                <p><strong>Константин Павелюк</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="success-info__item success-info__item--venue">
+                    <div class="success-info__title-block">
+                        <p class="success-info__title">Где будут проходить работы?</p>
+                    </div>
+                    <div class="success-info__info-block success-info__info-block--venue">
+                        <div class="success-info__dealer">
+                            <p class="success-info__dealer-name">Фольксваген Центр Таллинский</p>
+                            <p class="success-info__dealer-address">Cанкт-Петербург, Старо-Паново, Таллинское шоссе, дом 157, литера А</p>
+                            <p class="success-info__dealer-time">Ежедневно с 09:00 до 21:00</p>
+                            <p class="success-info__dealer-phone"><a href="tel:+78126035009">+7 (812) 603-50-09</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="success-info__note">
+                <p>Вся информация продублирована на ваш мобильный телефон </p>
+                <p>Пожалуйста ожидайте звонка для уточнения деталей</p>
+            </div>
+
+            <div class="success-info__btns-block">
+                <a href="#succes-send" class="btn-send js-call-popup">Завершить</a>
+            </div>
+
+        </div>
+    </div>
+
+</form>
+
+
+@@include('./main/footer.html')

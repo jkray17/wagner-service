@@ -1,0 +1,140 @@
+.error {
+    padding-bottom: 112px;
+
+    @media screen and (max-width: @ipad) {
+        padding-bottom: 80px;
+    }
+
+    &__inner {
+        max-width: 418px;
+    }
+
+    &__title {
+        padding-bottom: 14px;
+
+        @media screen and (max-width: @mob) {
+            font-size     : 28px;
+            padding-bottom: 13px;
+        }
+    }
+
+    &__text {
+        font-size     : 16px;
+        line-height   : 1.5;
+        padding-bottom: 40px;
+        text-align    : center;
+
+        @media screen and (max-width: @ipad) {
+            padding-bottom: 14px;
+        }
+        @media screen and (max-width: @mob) {
+            padding-bottom: 40px;
+            font-size: 18px;
+        }
+    }
+
+    &__form {
+        width    : 300px;
+        max-width: 100%;
+        margin   : auto;
+
+        @media screen and (max-width: @ipad) {
+            width: 350px;
+        }
+    }
+
+    &__for-input {
+        position     : relative;
+    }
+
+    &__btns-block {
+        padding-top: 60px;
+        text-align : center;
+    }
+
+}
+
+// Input
+.error__input {
+    border       : 1px solid #B2BFCF;
+    font-weight  : 400;
+    color        : @color-text;
+    height       : 48px;
+    width        : 100%;
+    font-size    : 16px;
+    padding-left : 14px;
+    padding-right: 14px;
+    border-radius: 12px;
+    background   : #ffffff;
+
+    @media screen and (max-width: @ipad) {
+        width        : calc(100% - 12px);
+        border-radius: 14px;
+        margin-right : 12px;
+
+        border       : 0;
+        padding      : 14px 50px 14px 20px;
+
+        margin-right: 12px;
+        background  : #FDFBDD;
+    }
+
+    &::-webkit-input-placeholder {
+        color      : #B0B0B0;
+        opacity    : 1;
+        font-weight: 400;
+    }
+
+    &::-moz-placeholder {
+        color      : #B0B0B0;
+        opacity    : 1;
+        font-weight: 400;
+    }
+
+    /* Firefox 19+ */
+    &:-moz-placeholder {
+        color      : #B0B0B0;
+        opacity    : 1;
+        font-weight: 400;
+    }
+
+    /* Firefox 18- */
+    &:-ms-input-placeholder {
+        color      : #B0B0B0;
+        opacity    : 1;
+        font-weight: 400;
+    }
+}
+
+.error__input:valid,
+.error__input--validity {
+    border-color: #1A252F;
+    background  : #ffffff;
+    color       : @color-text;
+
+    @media screen and (max-width: @ipad) {
+        background: #F3F5F5;
+
+    }
+}
+
+.error__label-input {
+    display: none;
+}
+
+.error__input:valid+.error__label-input,
+.error__input--validity+.error__label-input {
+
+    @media screen and (max-width: @ipad) {
+        display        : block;
+        position       : absolute;
+        background     : url(../images/icons/mob-select-arrow-ok.svg) no-repeat center;
+        background-size: contain;
+        width          : 24px;
+        height         : 24px;
+        top            : 0;
+        bottom         : 0;
+        margin         : auto;
+        right          : 0;
+    }
+}

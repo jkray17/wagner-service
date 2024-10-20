@@ -1,0 +1,217 @@
+.verification {
+    padding-bottom: 112px;
+
+    @media screen and (max-width: @ipad) {
+        padding-top   : 40px;
+        padding-bottom: 80px;
+    }
+    @media screen and (max-width: @mob) {
+        padding-top: 22px;
+    }
+
+    &__inner {
+        max-width: 530px;
+    }
+
+    &__title {
+        padding-bottom: 14px;
+
+        @media screen and (max-width: @mob) {
+            font-size     : 28px;
+            padding-bottom: 13px;
+        }
+    }
+
+    &__text {
+        font-size     : 16px;
+        line-height   : 1.5;
+        padding-bottom: 40px;
+        text-align    : center;
+
+        @media screen and (max-width: @ipad) {
+            padding-bottom: 30px;
+        }
+    }
+
+    &__form {
+        width    : 300px;
+        max-width: 100%;
+        margin   : auto;
+
+        @media screen and (max-width: @ipad) {
+            width: 350px;
+        }
+    }
+
+    &__for-input {
+        margin-bottom: 14px;
+        position     : relative;
+    }
+
+    &__repeatedly {
+        text-align: center;
+
+        @media screen and (max-width: @mob) {
+            padding-top: 26px;
+        }
+    }
+
+    &__repeat-text {
+        font-size     : 16px;
+        line-height   : 1.25;
+        color         : #B0B0B0;
+        padding-bottom: 8px;
+    }
+
+    &__repeat-time {
+        font-size  : 13px;
+        font-weight: 600;
+        color      : #DF1B2A;
+        line-height: 1.25;
+    }
+
+    &__btns-block {
+        padding-top: 60px;
+        text-align : center;
+    }
+
+    &__send-repeat {
+        color          : @color-text;
+        text-decoration: underline;
+        font-size      : 16px;
+
+        &:disabled {
+            color          : #B0B0B0;
+            text-decoration: none;
+        }
+    }
+
+    &__text-error {
+        text-align    : center;
+        font-size     : 18px;
+        color         : @color-red;
+        padding-bottom: 20px;
+
+        @media screen and (max-width: @mob) {
+            padding-bottom: 14px;
+        }
+    }
+
+}
+
+// Input
+.verification__input {
+    border       : 1px solid #B2BFCF;
+    font-weight  : 700;
+    color        : @color-text;
+    height       : 48px;
+    width        : 100%;
+    font-size    : 16px;
+    padding-left : 14px;
+    padding-right: 14px;
+    border-radius: 12px;
+    background   : #ffffff;
+
+    @media screen and (max-width: @ipad) {
+        width        : calc(100% - 12px);
+        border-radius: 14px;
+        margin-right : 12px;
+    }
+
+    @media screen and (max-width: @ipad) {
+        border       : 0;
+        padding      : 14px 50px 14px 20px;
+        border-radius: 14px;
+
+        margin-right: 12px;
+        background  : #FDFBDD;
+    }
+
+    &::-webkit-input-placeholder {
+        color      : #B0B0B0;
+        opacity    : 1;
+        font-weight: 400;
+    }
+
+    &::-moz-placeholder {
+        color      : #B0B0B0;
+        opacity    : 1;
+        font-weight: 400;
+    }
+
+    /* Firefox 19+ */
+    &:-moz-placeholder {
+        color      : #B0B0B0;
+        opacity    : 1;
+        font-weight: 400;
+    }
+
+    /* Firefox 18- */
+    &:-ms-input-placeholder {
+        color      : #B0B0B0;
+        opacity    : 1;
+        font-weight: 400;
+    }
+}
+
+// .verification__input:valid,
+.verification__input--validity {
+    border-color: #1A252F;
+    background  : #ffffff;
+    color       : @color-text;
+
+    @media screen and (max-width: @ipad) {
+        background: #F3F5F5;
+
+    }
+}
+
+.verification__label-input {
+    display: none;
+}
+
+/* .verification__input:valid+.verification__label-input,*/
+.verification__input--validity+.verification__label-input {
+
+    display        : block;
+    position       : absolute;
+    background     : url(../images/icons/mob-select-arrow-ok.svg) no-repeat center;
+    background-size: contain;
+    width          : 24px;
+    height         : 24px;
+    top            : 0;
+    bottom         : 0;
+    margin         : auto;
+    right          : 10px;
+
+    @media screen and (max-width: @ipad) {
+        right: 0;
+    }
+}
+
+.verification__input--error {
+    background: rgba(223, 27, 42, 0.2);
+    border    : 1px solid #DF1B2A;
+
+    @media screen and (max-width: @ipad) {
+        background: rgba(223, 27, 42, 0.2);
+        border    : 1px solid #DF1B2A;
+    }
+}
+
+.verification__input--error+.verification__label-input {
+    display        : block;
+    position       : absolute;
+    background     : url(../images/icons/mob-select-arrow-close.svg) no-repeat center;
+    background-size: contain;
+    width          : 24px;
+    height         : 24px;
+    top            : 0;
+    bottom         : 0;
+    margin         : auto;
+    right          : 10px;
+
+    @media screen and (max-width: @ipad) {
+        right: 0;
+    }
+}

@@ -1,0 +1,52 @@
+@@include('./main/head.html', {
+"title": "Шаг №3"
+})
+@@include('./main/header.html',{
+"classmain": "main--second-step"
+})
+
+<section class="promo">
+    <div class="promo__inner inner">
+        <div class="promo__grid">
+            <div class="promo__item promo__item--title ">
+                <h1 class="promo__title">Запись на сервис <br> за <span>3 минуты online</span></h1>
+            </div>
+            <div class="promo__item promo__item--img">
+                <img src="./images/clock-promo.png" alt="Clock" class="promo__photo-bg">
+            </div>
+            <div class="promo__btns-block">
+                <a href="#steps" class="btn-sign-up js-link-anchor">Записаться</a>
+            </div>
+            <div class="promo__item promo__item--brands">
+                <img src="./images/brands-line.png" alt="Brands" class="promo__brands">
+            </div>
+        </div>
+    </div>
+</section>
+
+<form action="" method="post">    
+
+    <div class="verification">
+        <div class="inner verification__inner">
+            <h2 class="verification__title">Верификация</h2>
+            <p class="verification__text">Пожалуйста введите СМС-код отправленный на ваш телефон для подтверждения записи</p>
+            <div class="verification__form">
+                <div class="verification__for-input">
+                    <input type="text" name="verification" class="verification__input" placeholder="Введите код верификации" required>
+                    <label class="verification__label-input"></label>
+                </div>
+                <div class="verification__repeatedly">
+                    <p class="verification__repeat-text"><button class="verification__send-repeat" disabled>Отправить код повторно</button></p>
+                    <p class="verification__repeat-time">Через 2:00 минуты</p>
+                </div>
+                <div class="verification__btns-block">
+                    <button type="button" class="btn-confirm" disabled>Подтвердить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+@@include('./main/footer.html')

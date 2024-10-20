@@ -1,0 +1,72 @@
+.choise-address {
+    padding-bottom: 80px;
+
+    @media screen and (max-width: @ipad) {
+        padding-bottom: 60px;
+    }
+
+    &__inner {
+        max-width: 490px;
+
+        @media screen and (max-width: @ipad) {
+            max-width: 410px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__block {
+        padding-bottom: 14px;
+
+        @media screen and (max-width: @ipad) {
+            padding-bottom: 20px;
+        }
+        @media screen and (max-width: @ipad) {
+            padding-bottom: 14px;
+        }
+    }
+
+
+    &__dealer {
+        font-size: 16px;
+    }
+
+    &__address {
+        font-size: 11px;
+    }
+
+    &__icons {
+        position: absolute;
+        right   : 36px;
+        top     : 0;
+        bottom  : 0;
+        margin  : auto;
+
+        &--result {
+            @media screen and (max-width: @ipad) {
+                right: 20px;
+            }
+        }
+    }
+
+    &__icons-active {
+        position: absolute;
+        right   : 36px;
+        top     : 0;
+        bottom  : 0;
+        margin  : auto;
+        display : none;
+    }
+
+    &__btns-block {
+        text-align: center;
+    }
+
+    &__btn {
+        font-size: 16px;
+        color    : @color-red;
+    }
+
+}

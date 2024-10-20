@@ -1,0 +1,233 @@
+// Стили для выпадаек select2-choise-car + &--theme-select2-choise-car
+.select2-choise-car {
+    position: relative;
+}
+
+.select2-choise-car:before {
+    content: none;
+}
+
+.select2-choise-car .select2-container {
+    background: transparent;
+}
+
+//Само поле вывода
+.select2-choise-car .select2-container--theme-select2-choise-car .select2-selection--single {
+    background   : transparent;
+    position     : relative;
+    height       : 48px;
+    padding: 12px 10px 12px 14px;
+    border: 1px solid #B2BFCF;
+    border-radius: 12px;
+    display      : flex;
+    align-content: center;
+    align-items  : center;
+    background: #FDFBDD;
+
+    @media screen and (max-width: @ipad) {
+        border: 0;
+        padding: 14px 50px 14px 20px;
+        border-radius: 14px;        
+
+        margin-right: 12px;
+    }
+}
+
+.select2-choise-car select:disabled + .select2-container--theme-select2-choise-car .select2-selection--single {
+    background: #ffffff;
+    cursor: not-allowed;
+
+    @media screen and (max-width: @ipad) {
+        background: #F3F5F5;
+    }
+}
+
+//placeholder
+.select2-choise-car .select2-container--theme-select2-choise-car .select2-selection__placeholder {
+    color: #B2BFCF;
+    font-weight: 400;
+    font-size  : 16px;
+}
+
+//выбранный пункт
+.select2-choise-car .select2-container--theme-select2-choise-car .select2-selection--single .select2-selection__rendered {
+    font-size  : 16px;
+    font-weight: 400;
+    color      : #1A252F;
+}
+
+//стрелочка в селекте
+.select2-choise-car .select2-container--theme-select2-choise-car .select2-selection--single .select2-selection__arrow {
+    position: static;
+}
+
+.select2-choise-car .select2-container--theme-select2-choise-car .select2-selection--single .select2-selection__arrow b {
+    position           : absolute;
+    border             : none;
+    width              : 24px;
+    height             : 24px;
+    margin             : auto;
+    content            : '';
+    pointer-events     : none;
+    background-image   : url(../images/icons/select-arrow.svg);
+    background-position: right center;
+    background-repeat  : no-repeat;
+    transition         : transform .5s ease-in-out;
+    top                : 0;
+    bottom             : 0;
+    right              : 10px;
+
+    @media screen and (max-width: @ipad) {
+        right: -12px;
+        background-image   : url(../images/icons/mob-select-arrow.svg);
+    }
+}
+
+//стрелочка, когда открыт список выбора
+.select2-choise-car .select2-container--theme-select2-choise-car.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    transform: rotateX(180deg);
+
+    @media screen and (max-width: @ipad) {
+        transform: rotate(0);
+        background-image   : url(../images/icons/mob-select-arrow-close.svg);
+        right: 12px;
+    }
+}
+//стрелочки при disabled
+.select2-choise-car select:disabled + .select2-container--theme-select2-choise-car .select2-selection--single .select2-selection__arrow b {
+    @media screen and (max-width: @ipad) {
+        background-image: url(../images/icons/mob-select-arrow-disabled.svg);
+    }
+}
+
+//Блок с выбором
+.select2-container--theme-select2-choise-car .select2-results__options {
+    padding   : 0 0 20px;
+    position  : relative;
+    background: #F3F5F5;
+    border-radius: 0 0 14px 14px;
+    max-height: 375px;
+    overflow-y: auto;
+}
+
+//Элемент выбора в списке
+.select2-container--theme-select2-choise-car .select2-results__option {
+    font-size     : 16px;
+    padding       : 10px 12px 10px 30px;
+    color         : @color-text;
+    font-weight   : 400;
+
+    @media screen and (max-width: @ipad) {
+        position: relative;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        &:after {
+            content: 'Выбрать';
+            position: absolute;
+            right: 12px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 92px;
+            height: 32px;
+            border-radius: 6px;
+            border: 1px solid #979797;
+            font-size: 14px;
+            line-height: 1;
+            color: #979797;
+            display: inline-flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+//Элемент выбора в списке при наведении
+.select2-container--theme-select2-choise-car .select2-results__option--highlighted:hover {
+    color: @color-red;
+}
+
+//Выбранный элемент в списке
+.select2-container--theme-select2-choise-car .select2-results__option[aria-selected=true] {
+    color: @color-red;
+    font-weight: 700;
+
+    @media screen and (max-width: @ipad) {
+        &:after {
+            content: 'Выбрано';
+            background: @color-red;
+            color: #ffffff;
+            border-color: @color-red;
+        }
+    }
+}
+
+//***дополнительно***//
+
+// само поле вывода, когда выбран пункт (доп. класс чз js)
+.select2--ok.select2-choise-car .select2-container--theme-select2-choise-car .select2-selection--single {
+    background: #ffffff;
+    border-color: #1A252F;
+
+    @media screen and (max-width: @ipad) {
+        background: #F3F5F5;
+    }
+}
+.select2--ok.select2-choise-car .select2-container--theme-select2-choise-car .select2-selection--single .select2-selection__arrow b {
+    background-image   : url(../images/icons/select-arrow-black.svg);
+
+    @media screen and (max-width: @ipad) {
+        background-image: url(../images/icons/mob-select-arrow-ok.svg);
+    }
+}
+
+//само поле вывода, когда открыт выбор пунктов
+.select2-choise-car .select2-container--open.select2-container--theme-select2-choise-car .select2-selection--single {
+    border-radius: 14px 14px 0 0;
+    background: #F3F5F5;
+    border-color: #F3F5F5;
+
+    @media screen and (max-width: @ipad) {
+        background: #F3F5F5;
+        margin-right: 0;
+    }
+}
+
+
+//***Служебные***//
+.select2-choise-car .select2-container--theme-select2-choise-car.select2-container--open {
+    border-radius: 0;
+}
+
+.select2-choise-car .select2-dropdown {
+    border: none;
+}
+
+.select2-choise-car .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+}
+
+.select2-container--theme-select2-choise-car.select2-container--open .select2-dropdown--below {
+    border: 0;
+    background: transparent;
+}
+
+.select2-container--theme-select2-choise-car .select2-search--dropdown {
+    display: none;
+}
+
+.select2-choise-car .select2.select2-container {
+    width: 100% !important;
+}
+
+
+// Ошибка заполнения
+.form__input--error+.select2-container--theme-select2-choise-car .select2-selection--single {
+    border-color: red;
+}
+
+.form__input--error+.select2-container--theme-select2-choise-car .select2-selection__placeholder {
+    color: red;
+}

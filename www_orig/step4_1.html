@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Шаг №3</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/select2.css">	 
+    <link rel="stylesheet" href="css/slick.css">	 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uncompressed.css">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="./favicons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="32x32" href="./favicons/apple-icon-32x32.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="./favicons/apple-icon-180x180.png">
+    <link rel="icon" sizes="192x192" href="./favicons/android-icon-192x192.png">    
+
+    <meta content="width=device-width, user-scalable=1, initial-scale=1" name="viewport" />
+
+</head>
+
+<body class="body">
+<header class="header">
+    <div class="inner">
+        <a href="#insertLink" class="header__link">
+            <img src="./images/logo2.png" alt="Logo" class="header__logo">
+            <span class="header__text">группа официальных дилеров</span>
+        </a>
+    </div>
+</header>
+
+<main class="main main--second-step">
+
+<section class="promo">
+    <div class="promo__inner inner">
+        <div class="promo__grid">
+            <div class="promo__item promo__item--title ">
+                <h1 class="promo__title">Запись на сервис <br> за <span>3 минуты online</span></h1>
+            </div>
+            <div class="promo__item promo__item--img">
+                <img src="./images/clock-promo.png" alt="Clock" class="promo__photo-bg">
+            </div>
+            <div class="promo__btns-block">
+                <a href="#steps" class="btn-sign-up js-link-anchor">Записаться</a>
+            </div>
+            <div class="promo__item promo__item--brands">
+                <img src="./images/brands-line.png" alt="Brands" class="promo__brands">
+            </div>
+        </div>
+    </div>
+</section>
+
+<form action="" method="post">    
+
+    <div class="verification">
+        <div class="inner verification__inner">
+            <h2 class="verification__title">Верификация</h2>
+            <p class="verification__text">Пожалуйста введите СМС-код отправленный на ваш телефон для подтверждения записи</p>
+            <div class="verification__form">
+                <div class="verification__for-input">
+                    <input type="text" name="verification" class="verification__input verification__input--error" placeholder="Введите код верификации" value="904180" required>
+                    <label class="verification__label-input"></label>                    
+                </div>
+                <p class="verification__text-error">Ошибка!</p>
+                <div class="verification__repeatedly">
+                    <p class="verification__repeat-text"><button class="verification__send-repeat">Отправить код повторно</button></p>
+                    <p class="verification__repeat-time">Через 2:00 минуты</p>
+                </div>
+                <div class="verification__btns-block">
+                    <button type="button" class="btn-confirm" disabled>Подтвердить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+</main>
+<footer class="footer">
+    <div class="inner footer__inner">
+        <div class="footer__btns-block">
+            <a href="#support" class="btn-support js-call-popup">Поддержка</a>
+        </div>
+        <p class="footer__text">Обращаем Ваше внимание на то, что данный <nobr>интернет-сайт</nobr> носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437 (2) Гражданского кодекса Российской Федерации.</p>
+        <p class="footer__copyright">WAGNER © 2021</p>
+    </div>
+</footer>
+
+<div id="succes-send" class="popup">
+    <div class="popup__container popup__container--succes">
+        <!-- <button type="button" class="popup__close">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36 16.364c10.845 0 19.637 8.791 19.637 19.636 0 10.845-8.792 19.636-19.637 19.636S16.364 46.846 16.364 36c0-10.845 8.791-19.636 19.636-19.636z" fill="#FF4858"/><path d="M36 36l-8.182 8.182M36 36l8.182 8.182M36 36l8.182-8.182M36 36l-8.182-8.181" stroke="#fff" stroke-width="3.273"/></svg>
+        </button> -->
+        <div class="popup__inner">
+
+            <div class="succes-send-popup">
+                <div class="succes-send-popup__text-block">
+                    <p class="succes-send-popup__title">Благодарим!</p>
+                    <p class="succes-send-popup__text">Наш менеджер скоро с вами свяжется</p>
+                    <div class="succes-send-popup__btns-block">
+                        <a href="#insertLink" class="btn-complete">Завершить</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="support" class="popup">
+    <div class="popup__container popup__container--support">
+        <button type="button" class="popup__close">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M36 16.364c10.845 0 19.637 8.791 19.637 19.636 0 10.845-8.792 19.636-19.637 19.636S16.364 46.846 16.364 36c0-10.845 8.791-19.636 19.636-19.636z" fill="#FF4858" />
+                <path d="M36 36l-8.182 8.182M36 36l8.182 8.182M36 36l8.182-8.182M36 36l-8.182-8.181" stroke="#fff" stroke-width="3.273" />
+            </svg>
+        </button>
+        <div class="popup__inner">
+
+            <div class="support-form-popup">
+                <div class="support-form-popup__text-block">
+                    <p class="support-form-popup__title">Поддержка</p>
+                    <p class="support-form-popup__text">Пожалуйста оставьте нам номер телефона и мы с вами свяжемся в ближайшее время!</p>
+
+                    <form class="support-form-popup__form" action="" method="post">
+                        <div class="support-form-popup__for-input">
+                            <input type="tel" name="phone" class="support-form-popup__input" placeholder="+ 7 (___) ___ __ __" required>
+                        </div>
+                        <div class="support-form-popup__btns-block">
+                            <a href="#insertLink" class="btn-complete">Отправить</a>
+                        </div>
+                    </form>                    
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"type="text/javascript"></script>
+<script src="js/yandex-map.js"></script>
+<script src="js/select2.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>

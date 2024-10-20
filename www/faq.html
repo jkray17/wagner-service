@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ Wagner Запись на сервис</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uncompressed.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="./favicons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="32x32" href="./favicons/apple-icon-32x32.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="./favicons/apple-icon-180x180.png">
+    <link rel="icon" sizes="192x192" href="./favicons/android-icon-192x192.png">
+
+    <meta content="width=device-width, user-scalable=1, initial-scale=1" name="viewport" />
+
+    <style>
+        body {
+            font-size: 15px;
+        }
+        .faq {
+            padding: 0 0 80px;
+        }
+
+        .faq a {
+            color: #CD2682;
+        }
+
+        .faq-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .faq-table td {
+            padding: 10px 20px;
+            border-bottom: 1px solid #cccccc;
+            vertical-align: top;
+        }
+
+
+        .faq-table td:nth-child(1) {
+            width: 25%;
+            border-right: 1px solid #cccccc;
+        }
+
+        .faq-table td:last-child {
+            width: 75%;
+        }
+
+        .faq-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .faq-table td p {
+            padding-bottom: 10px;
+        }
+
+        .faq-table td p:last-child {
+            padding-bottom: 0;
+        }
+        .faq-table span {
+            font-family: monospace;
+            color: orange;
+        }
+        
+        .faq-table h3,
+        .faq-table h2 {
+            padding-bottom: 10px;
+            padding-top: 10px;
+            text-align: left;
+        }
+
+        .faq ul {
+            list-style: none;
+            padding-bottom: 10px;
+        }
+
+        .faq li {
+            position: relative;
+            padding-left: 18px;
+            padding-bottom: 10px;
+        }
+        .faq li:last-child {
+            padding-bottom: 0;
+        }
+
+        .faq li:before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: #34495E;
+            position: absolute;
+            top: 6px;
+            left: 0;
+        }
+    </style>
+
+</head>
+
+<body class="body">
+
+    <main class="main">
+
+        <div class="faq">
+            <div class="inner">
+                <table class="faq-table">
+                    <tr>
+                        <td><strong>Макет и функционал</strong></td>
+                        <td>
+                            <p>Макет <a href="https://www.figma.com/file/qvyCUXCbBSG6cwzvmUzx9T/Wagner-Zayavka?node-id=203%3A399" tabindex="_blank">здесь</a>.</p> 
+                            <p>Там отмечены все <strong>комментарии по функционалу!</strong> </p>
+                            <p>Чтобы их увидеть, необходимо кликнуть <a href="https://s.mail.ru/V7yy/ZZnCrNYZi" target="_blank">тут</a href="https://s.mail.ru/V7yy/ZZnCrNYZi" target="_blank">.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3><a href="index.html" target="_blank">Шаг 1</a></h3>
+                            <p><strong>Этапы заполнения:</strong></p>
+                            <ul>
+                                <li>Исходное состояние - <a href="index.html" target="_blank">index.html</a></li>
+                                <li>Заполнено поле "Марка" - <a href="index_1.html" target="_blank">index_1.html</a></li>
+                                <li>Заполнено поле "Модель" - <a href="index_2.html" target="_blank">index_2.html</a></li>
+                                <li>Заполнено поле "Год выпуска" - <a href="index_3.html" target="_blank">index_3.html</a></li>
+                                <li>Заполнены все поля и чек-бокс, кнопка "Далее" активна - <a href="index_full.html" target="_blank">index_full.html</a></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <h3>Select</h3>
+                            <p>У всех <strong>select</strong> (кроме первого) сейчас стоит <span>disabled</span>. Они становятся доступными по очереди после заполнения предыдущего (см. комментарии в figma). Стили, соответственно, прописаны для обычного состояния и для disabled. </p> 
+                            <p>После того как выбрано значение поля select в родителю добавляется класс <span><strong>select2--ok</strong></span>, это необходимо для стилизации заполненного поля. <a href="https://s.mail.ru/gFv4/TUNvgYUbT" target="_blank">Прописано в js</a>. <br>
+                            Так же дополнительно стоит функция проверки заполненности полей при загрузке страницы. <a href="https://s.mail.ru/e1Jd/WALxd1APm" target="_blank">Функция вот тут</a>.</p>
+                            <h3>Чек-бокс</h3>
+                            <p>У <strong>чек-бокса "согласие..."</strong> сейчас стоит <span>disabled</span>. Когда станет актвным (после заполнения остальных полей), у чек-бокса убирается disabled и меняются стили (в стилях прописано).</p>
+                            <h3>Кнопка "Далее"</h3>
+                            <p>У <strong>кнопки "Далее"</strong> сейчас стоит <span>disabled</span>. Когда кнопка становится активной (после заполнения всех полей), у кнопки убирается disabled и она становится красненькой (в стилях прописано).</p>
+
+                            <h3>Кнопка "Записаться"</h3>
+                            <p>Это ссылка-якорь на форму (на моб. кнопка на первом экране, на десктопе наоборот внизк страницы).</p>
+                            
+                            <h3>Дополнительно</h3>
+                            <p>Не придумала как реализовать вот <a href="https://s.mail.ru/st6G/xKd4q2pTU" target="_blank">эту штуку</a>. Поэтому идет просто прокрутка. <br>Не уверена, что такое в select2 реально реализовать (не нашла нигде инф., но основная документация на англ., не разобрать...). Но если вдруг получится реализовать, могу потом помочь простилизовать...</p>
+
+                            <h2 style="color: blueviolet;">Этапы заполнения</h2>
+                            <p>По каждому состоянию создала для примера отдельные файлики:</p>
+                            <ul>
+                                <li>Исходное состояние - <a href="index.html" target="_blank">index.html</a></li>
+                                <li>Заполнено поле "Марка" - <a href="index_1.html" target="_blank">index_1.html</a></li>
+                                <li>Заполнено поле "Модель" - <a href="index_2.html" target="_blank">index_2.html</a></li>
+                                <li>Заполнено поле "Год выпуска" - <a href="index_3.html" target="_blank">index_3.html</a></li>
+                                <li>Заполнены все поля и чек-бокс, кнопка "Далее" активна - <a href="index_full.html" target="_blank">index_full.html</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <h3><a href="step2.html" target="_blank">Шаг 2</a></h3>
+                            <p><strong>Этапы заполнения:</strong></p>
+                            <ul>
+                                <li>Исходное состояние - <a href="step2.html" target="_blank">step2.html</a>.</li>
+                                <li>Заполнено поле "ДЦ", кнопка выбора даты и мастера активна - <a href="step2_1.html" target="_blank">step2_1.html</a></li>
+                                <li>Выбрана дата, место и время, кнопка "далее" активна - <a href="step2_2.html">step2_2.html</a>.</li>                                
+                            </ul>
+                            <p>Подробнее см. ниже.</p>
+                        </td>
+                        <td>
+                            <h2>1. Дилерский центр</h2>
+                            <h3>Выбор дилерского центра</h3>
+                            <p>Сделано с помощью <span><strong>select2</strong></span>. Поле сразу активно. <br> В option важно прописать все <span>data</span> (<span>data-name</span>, <span>data-address</span>, <span>data-img</span>). Они используются в js-коде для красивого вывода select. В data-img указывается ссылка на картинку с иконками марок.</p> 
+
+                            <h3>Карта</h3>
+                            <p>Карта открывается по клику на "Показать карту" (<span>js-open-map</span>). <br>У кнопки 3-и состояния: <br><span>data-status="not"</span> - карта еще не запущена (карта инициализируется при первом открытии блока), <br><span>data-status="open"</span> - карта открыта, <br><span>data-status="close"</span> - карта закрыта. </p>
+                            <p>Карта реализована чз <strong>Яндекс Карты API,</strong> там прописаны все точки.</p>
+                            <p>Задумка в том, что пользователь должен иметь возможность выбрать точку (адрес центра) на карте (подробнее см. в фигме). </p>
+                            <p>В файлах загружена иконка для выбранного дилерского центра - <span><nobr>images/icons/Map_marker-active.svg</nobr></span>. Нужно будет ее прописать у выбранного элемента, вместо стандартного.</p>
+                            <p align="center">***</p>
+                            <p>После выбора ДЦ, надпись должна поменяться с "Выберите адрес" на "Вы выбрали адрес"</p>
+
+                            <h2>2. Выбор мастера и даты</h2>
+                            <h3>Кнопка открытия выбора</h3>
+                            <p>Изначально поле недоступно для вывода. Становится доступно после выбора дилерского центра. По сути это просто кнопка (<span>btn-choise-master</span>). При клике на кнопку (после того как она становится активна), открывается информация для заполнения, а сама кнопка скрывается.</p>
+                            <p>Изначально у кнопки добавлен класс <span>btn-choise-master--disabled</span>, чтобы показать, что кнопка не активна. После того как выбран адрес, кнопка должна стать активной и класс необходимо убрать.</p>
+                            <p>После того как будет выбрана вся информация (дата, место, время), кнопку необходимо снова показать (при этом блок с выбором убрать) и добавить класс <span>btn-choise-master--active</span> + передать туда информацию о выбранном мастере, дате и времени (ниже примеры страниц по шагам).</p>
+
+                            <h3>Слайдер с датами</h3>
+                            <p>Слайдер с датами - внутри слайдера радио-кнопки для выбора даты. <br> По умолчанию выбран первый доступный день (<span>checked</span>), предыдущие все <span>disabled</span>. Так же по умолчанию слайдер начинается с первой доступной даты (минус 1) - вычисляется в js.</p>
+
+                            <h3>Блок с выбором мастера и времени</h3>
+                            <p>Должен подгружаться в зависимости от выбранного дня. <br>Внутри сделаны радио-кнопки для выбора нужного времени.</p>
+
+                            <p align="center">***</p>
+                            <p>После выбора даты, мастера и времени, надпись в заголовке должна поменять с "Выберите мастера и время" на "Вы выбрали мастера и время".</p>
+
+                            <h3>Кнопка "Далее"</h3>
+                            <p>У <strong>кнопки "Далее"</strong> сейчас стоит <span>disabled</span>. Когда кнопка становится активной (после заполнения всех полей), у кнопки убирается disabled и она становится красненькой (в стилях прописано).</p>
+
+                            <h2 style="color: blueviolet;">Этапы заполнения</h2>
+                            <p>По каждому состоянию создала для примера отдельные файлики:</p>
+                            <ul>
+                                <li>Исходное состояние - <a href="step2.html" target="_blank">step2.html</a>. Поле "Дилерский центр" активно, кнопка выбора даты и мастера + кнопка "далее" НЕ активны. Карта открывается по клику.</li>
+                                <li>Заполнено поле "ДЦ", кнопка выбора даты и мастера активна - <a href="step2_1.html" target="_blank">step2_1.html</a> + изменен первый заголовок на "Вы выбрали адрес". При клике на кнопку открывается выбор даты, мастера и времени.</li>
+                                <li>Выбрана дата, место и время, кнопка "далее" активна - <a href="step2_2.html">step2_2.html</a>. Блок с выбором скрыт. При клике открывается выбор, где отмечены выбранная дата и время. Заголовок изменен на "Вы выбрали мастера и время".</li>                                
+                            </ul>
+                            
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3><a href="step3.html" target="_blank">Шаг 3</a></h3>
+                            <p><strong>Этапы заполнения:</strong></p> 
+                            <ul>
+                                <li>Исходное состояние - <a href="step3.html" target="_blank">step3.html</a>. </li>
+                                <li>Заполнено поле "Имя", поле "Телефон" становится активно - <a href="step3_1.html" target="_blank">step3_1.html</a>.</li>
+                                <li>Заполнено поле "Телефон", кнопка "Далее" активна - <a href="step3_2.html" target="_blank">step3_2.html</a></li>                                
+                            </ul>                           
+                            <p>Подробнее см. ниже.</p>
+                        </td>
+                        <td>
+                            <h3>Input-ы</h3>
+                            <p>Сначала доступно <strong>поле "Имя"</strong> для заполнения, а у поля "Телефон" и у кнопки "Далее" стоит <span>disabled</span>.</p>
+                            <p>После того, как поле "Имя" заполнено (и прошло валидацию), к нему должен добавляться класс <span>contact-info__input--validity</span> (стандартное тоже подойдет - прописано свойство <span>.contact-info__input:valid</span>), а <strong>поле "Телефон"</strong> должно стать доступно (необходимо убрать <span>disabled</span>).</p>
+                            <p>У input-а "Телефон" изначально (когда оно НЕ активно) выводится placeholder "Номер телефона", а когда оно становится доступно - "+ 7 (___) ___ __ __", поэтому прописан дополнительный label (он автоматически убирается (display:none), когда поле перестает быть disabled.</p>
+                            <p>После того как поле "Телефон" заполнено (и прошло валидацию), к нему должен добавляется класс <span>contact-info__input--validity</span>, а у <strong>кнопки "Далее"</strong> необходимо убрать <span>disabled</span>.</p>
+                            <p style="text-align: center;">***</p>
+                            <p>У input-ов дополнительно указан label - он нужен для отображения статуса (тк у input нет псевдо-элементов before/after).</p>
+                            
+
+                            <h2 style="color: blueviolet;">Этапы заполнения</h2>
+                            <p>По каждому состоянию создала для примера отдельные файлики:</p>
+                            <ul>
+                                <li>Исходное состояние - <a href="step3.html" target="_blank">step3.html</a>. </li>
+                                <li>Заполнено поле "Имя", поле "Телефон" становится активно - <a href="step3_1.html" target="_blank">step3_1.html</a> + у него поменялся placeholder.</li>
+                                <li>Заполнено поле "Телефон", кнопка "Далее" активна - <a href="step3_2.html" target="_blank">step3_2.html</a></li>                                
+                            </ul>
+                            
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3><a href="step4.html" target="_blank">Верификация</a></h3>
+                            <p><strong>Этапы заполнения:</strong></p>  
+                            <ul>
+                                <li>Исходное состояние - <a href="step4.html" target="_blank">step4.html</a>. </li>
+                                <li>Состояние ошибки верификации - <a href="step4_1.html" target="_blank">step4_1.html</a>.</li>
+                                <li>Когда поле заполнено, кнопка "подвердить" активна - <a href="step4_2.html" target="_blank">step4_2.html</a>.</li>                                                             
+                            </ul>                          
+                            <p>Подробнее см. ниже.</p>
+                        </td>
+                        <td>
+                            <p>Изначально поле для заполнения активно, а кнопка "Подтвердить" не активна (<span>disabled</span>). Кнопка "Отправить код повторно" не активна (disabled).</p>
+                            <p>Под input-ом стоит label для добавления иконки состояния поля (тк  у input нет псевдо-элементов before/after).</p>
+                            <p>При ошибке верификации на поле навешивается класс <span>verification__input--error</span>. Появляется сообщение об ошибки. Кнопка "Отправить код повторно" активна.</p>
+                            <p>Когда поле заполнено, навешивается класс <span>verification__input--validity</span>, кнопка "Подтвердить" активна.</p>
+                            
+
+                            <h2 style="color: blueviolet;">Этапы заполнения</h2>
+                            <p>По каждому состоянию создала для примера отдельные файлики:</p>
+                            <ul>
+                                <li>Исходное состояние - <a href="step4.html" target="_blank">step4.html</a>. </li>
+                                <li>Состояние ошибки верификации - <a href="step4_1.html" target="_blank">step4_1.html</a>. Появилось сообщение об ошибки, кнопка повторной отправки кода активна.</li>
+                                <li>Когда поле заполнено, кнопка "подвердить" активна - <a href="step4_2.html" target="_blank">step4_2.html</a>.</li>                                                             
+                            </ul>
+                            
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3><a href="success.html" target="_blank">Успешная запись</a></h3>
+                            <ul>
+                                <li>Страница успеха - <a href="success.html" target="_blank">success.html</a>. </li>  
+                            </ul>
+                        </td>
+                        <td>
+                            <p>Страница при успешной отправки формы (записи).</p>                            
+                            <p>Внизу стоит кнопка-подтверждение (можно заменить ее на ссылку, при необходимости).</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3><a href="error.html" target="_blank">Ошибка</a></h3>
+                            <p><strong>Этапы заполнения:</strong></p>  
+                            <ul>
+                                <li>Исходное состояние - <a href="error.html" target="_blank">error.html</a>. </li>                                
+                                <li>Когда поле заполнено, кнопка "Отправить" активна - <a href="error_1.html" target="_blank">error_1.html</a>.</li>                                                             
+                            </ul>
+                            <p>Подробнее см. ниже.</p>
+                        </td>
+                        <td>
+                            <p>Изначально поле для заполнения активно, а кнопка "Отправить" не активна (<span>disabled</span>). </p>
+                            <p>Под input-ом стоит label для добавления иконки состояния поля (тк  у input нет псевдо-элементов before/after).</p>                            
+                            <p>Когда поле заполнено, навешивается класс <span>error__input--validity</span> (стандартное тоже подойдет - прописано свойство <span>.error__input:valid</span>), кнопка "Отправить" активна.</p>
+
+                            <h2 style="color: blueviolet;">Этапы заполнения</h2>
+                            <p>По каждому состоянию создала для примера отдельные файлики:</p>
+                            <ul>
+                                <li>Исходное состояние - <a href="error.html" target="_blank">error.html</a>. </li>                                
+                                <li>Когда поле заполнено, кнопка "Отправить" активна - <a href="error_1.html" target="_blank">error_1.html</a>.</li>                                                             
+                            </ul>
+                            
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3 style="color: #CD2682;">PopUp-ы</h3>     
+                            <p><strong>Список PopUp-ов:</strong></p>         
+                            <ul>
+                                <li><strong>PopUp с кнопки "Поддержка" - форма обратной связи</strong> - можно вызвать с любой страницы, кликнув на кнопку "Поддержка" в подвале.</li>
+                                <li><strong>PopUp успешной отправки сообщения на странице об успехе</strong> - <a href="success_popup.html" target="_blank">success_popup.html</a> (клик по кнопке "Завершить" (для примера).</li>
+                                <li><strong>PopUp успешной отправки сообщения на странице об ошибке</strong> - <a href="error_popup.html" target="_blank">error_popup.html</a> (клик по кнопке "Отправить" (для примера).</li>
+                            </ul>              
+                        </td>
+                        <td>
+                            <p>PopUp-ы вызываются с помощью конструкции типа: <br>
+                                <span>&lt;a href="#id-popup" class="js-call-popup"&gt;link&lt;/a&gt;</span>
+                            </p>
+                            <p>Так же можно вызвать PopUp принудительно (например, по какому-то другому событию) с помощью функции в js: <br>
+                                <span>PopUpShow(null, '&lt;a href="#id-popup"&gt;&lt;/a&gt;');</span><br>
+                                где ссылка содержит id popUp-а.
+                            </p>
+                            <p>Например, так:</p>
+                            <p><img src="https://sun9-33.userapi.com/impg/78sL1F03iGfyeSW4_pqHHQyTLywLxZRbmIq-MQ/zJTyLvOqPZU.jpg?size=436x68&quality=96&sign=ba53af2a18e2fc0c73c22b11bd659647&type=album" alt="Photo"></p>
+
+                            <h2 style="color: blueviolet;">Список PopUp-ов и примеры:</h2>
+                            <ul>
+                                <li><strong>PopUp с кнопки "Поддержка" - форма обратной связи</strong> - можно вызвать с любой страницы, кликнув на кнопку "Поддержка" в подвале.</li>
+                                <li><strong>PopUp успешной отправки сообщения на странице об успехе</strong> - <a href="success_popup.html" target="_blank">success_popup.html</a> (клик по кнопке "Завершить" (для примера). <br>Должен показываться пользователю после того, как он кликает на кнопку "Завершить".</li>
+                                <li><strong>PopUp успешной отправки сообщения на странице об ошибке</strong> - <a href="error_popup.html" target="_blank">error_popup.html</a> (клик по кнопке "Отправить" (для примера). <br>Должен показываться пользователю после того, как он отправляет свой номер телефона. <br>По сути popUp тот же, что и на странице успеха.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><h3>Дополнительно</h3></td>
+                        <td>
+                            <p>Пожелания:</p>
+                            <ul>
+                                <li>не подключать bootstrap сетку, если по верстке нужно будет что-то поправить, я поправлю. Bootstrap перебивает наши стили и усложняет дальнейшие корректировки;</li>
+                                <li>по возможности не минифицировать стилевые файлы, чтобы в них можно было вносить в дальнейшем правки при необходимости. ИЛИ сразу добавить файл, который можно будет править чз фтп, без сборки. Например, uncompressed.css</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

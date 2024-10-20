@@ -1,0 +1,69 @@
+@@include('./main/head.html', {
+"title": "Шаг №3"
+})
+@@include('./main/header.html',{
+"classmain": "main--second-step"
+})
+
+<section class="promo">
+    <div class="promo__inner inner">
+        <div class="promo__grid">
+            <div class="promo__item promo__item--title ">
+                <h1 class="promo__title">Запись на сервис <br> за <span>3 минуты online</span></h1>
+            </div>
+            <div class="promo__item promo__item--img">
+                <img src="./images/clock-promo.png" alt="Clock" class="promo__photo-bg">
+            </div>
+            <div class="promo__btns-block">
+                <a href="#steps" class="btn-sign-up js-link-anchor">Записаться</a>
+            </div>
+            <div class="promo__item promo__item--brands">
+                <img src="./images/brands-line.png" alt="Brands" class="promo__brands">
+            </div>
+        </div>
+    </div>
+</section>
+
+<form action="" method="post">
+
+    <div class="steps" id="steps">
+        <div class="inner inner__steps">
+            <div class="steps__block">
+                <div class="steps__step steps__step--active">1 шаг</div>
+                <div class="steps__step steps__step--active">2 шаг</div>
+                <div class="steps__step steps__step--active">3 шаг</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-info">
+        <div class="inner contact-info__inner">
+            <h2 class="contact-info__title">Контактная информация</h2>
+
+            <div class="contact-info__form">
+                <div class="contact-info__row row">
+                    <div class="contact-info__col col col-6 col-md-12">
+                        <div class="contact-info__for-input">
+                            <input type="text" name="name" class="contact-info__input " placeholder="Ваше имя" value="Иванов Иван" required>
+                            <label class="contact-info__label-input"></label>
+                        </div>
+                    </div>
+                    <div class="contact-info__col col col-6 col-md-12">
+                        <div class="contact-info__for-input">
+                            <input type="tel" name="phone" class="contact-info__input contact-info__input--phone" placeholder="+ 7 (___) ___ __ __" value="+ 7 123 456 78 90" required>
+                            <label class="contact-info__label-input"><span>Номер телефона</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-info__btns-block">
+                    <button type="button" class="btn-next">Далее</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</form>
+
+
+@@include('./main/footer.html')

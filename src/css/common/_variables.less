@@ -1,0 +1,28 @@
+// Colors
+@color-red: #DF1B2A;
+@color-black: #1A252F;
+@color-text: #34495E;
+
+//Row, col
+.row-mixin(@margin: 10px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -@margin;
+    margin-right: -@margin;
+}
+.col-mixin(@padding: 10px) {
+    padding-left: @padding;
+    padding-right: @padding;
+}
+
+// breakpoints
+@mob: 670px;
+@ipad: 960px;
+@tablet: 1200px;
+@inner: 1240px;
+
+// Высота шапки
+// @header-height: 80px;
+@header-height: 163px;
+@header-height-ipad: 90px;
+@header-height-mob: 74px;
