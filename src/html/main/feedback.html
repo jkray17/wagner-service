@@ -1,9 +1,108 @@
 <section class="feedback">
-	<div class="inner">
+	<!-- <div class="inner">
 		<div class="feedback__block-txt">
 			<span>Вашего авто нет <br>в списке?</span> 
 				Оставьте заявку, <br>мы поможем!
 		</div>
 		<div class="feedback__block-form"></div>
-	</div>
+	</div> -->
+	
+
+	<form action="" method="post">
+
+		<div class="steps" id="steps">
+			<div class="inner inner__steps">
+				<div class="steps__block">
+					<div class="steps__step steps__step--active">1 шаг</div>
+					<div class="steps__step">2 шаг</div>
+					<div class="steps__step">3 шаг</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="choise-car">
+			<div class="choise-car__inner inner">
+				<h2 class="choise-car__title">Какой у вас автомобиль?</h2>
+	
+				<div class="choise-car__block">
+					<div class="choise-car__row row">
+						<div class="choise-car__col choise-car__col--inputs col">
+							<div class="choise-car__inputs-block">
+								<div class="choise-car__inputs-block-col col-4 col-md-12">
+	
+									<div class="choise-car__for-select select2 select2-choise-car">
+										<select name="brand" data-placeholder="Марка" required>
+											<option value="">Марка</option>
+											<option value="Audi" selected>Audi</option>
+											<option value="Citroen">Citroen</option>
+											<option value="Mersedes-Benz">Mersedes-Benz</option>
+											<option value="Skoda">Skoda</option>
+											<option value="Volkswagen">Volkswagen</option>
+											<option value="Другая марка">Другая марка</option>
+										</select>
+									</div>
+	
+								</div>
+								<div class="choise-car__inputs-block-col col-4 col-md-12">
+	
+									<div class="choise-car__for-select select2 select2-choise-car">
+										<select name="model" data-placeholder="Модель" required>
+											<option value="">Модель</option>
+											<option value="модель 1">модель 1</option>
+											<option value="модель 2">модель 2</option>
+											<option value="модель 3">модель 3</option>
+											<option value="модель 4">модель 4</option>
+											<option value="модель 5">модель 5</option>
+											<option value="модель 6">модель 6</option>
+											<option value="модель 2">модель 2</option>
+											<option value="модель 3">модель 3</option>
+											<option value="модель 4">модель 4</option>
+											<option value="модель 5">модель 5</option>
+											<option value="модель 6">модель 6</option>
+											<option value="модель 2">модель 2</option>
+											<option value="модель 3">модель 3</option>
+											<option value="модель 4">модель 4</option>
+											<option value="модель 5">модель 5</option>
+											<option value="модель 6">модель 6</option>
+										</select>
+									</div>
+	
+								</div>
+								<div class="choise-car__inputs-block-col col-4 col-md-12">
+	
+									<div class="choise-car__for-select select2 select2-choise-car">
+										<select name="year" data-placeholder="Год выпуска" required disabled>
+											<option value="">Год выпуска</option>
+											<option value="2021">2021</option>
+											<option value="2020">2020</option>
+											<option value="2019">2019</option>
+											<option value="2018">2018</option>
+											<option value="2017">2017</option>
+											<option value="2016">2016</option>
+										</select>
+									</div>
+	
+								</div>
+							</div>
+						</div>
+						<div class="choise-car__col choise-car__col--btn col">
+							<button type="button" class="btn-next" disabled>Далее</button>
+						</div>
+	
+						<div class="choise-car__col choise-car__col-agree col col-12">
+							<div class="choise-car__for-checkbox">
+								<input class="choise-car__checkbox" id="agree" type="checkbox" name="agree[]" value="Согласие на дальнейшую коммуникацию" required  data-form-error="Подтвердите согласие на коммуникацию" disabled>
+								<label for="agree" class="choise-car__label-checkbox">
+									<span class="choise-car__check"></span>
+									<span class="choise-car__check-text">Я соглашаюсь с условиями обработки моих персональных данных и на рекламную коммуникацию. <a href="#insertLink">Подробнее</a></span>
+								</label>
+							</div>
+						</div>
+	
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</form>
 </section>
