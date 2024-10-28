@@ -1,34 +1,22 @@
 <section class="feedback">
-	<!-- <div class="inner">
-		<div class="feedback__block-txt">
-			<span>Вашего авто нет <br>в списке?</span> 
+	<div class="inner">
+		
+
+	<form action="" method="post" class="row">
+
+		<div class="feedback__block-txt col col-6">
+			<span>Вашего авто нет <br>в списке?</span> <br>
 				Оставьте заявку, <br>мы поможем!
 		</div>
-		<div class="feedback__block-form"></div>
-	</div> -->
 	
-
-	<form action="" method="post">
-
-		<div class="steps" id="steps">
-			<div class="inner inner__steps">
-				<div class="steps__block">
-					<div class="steps__step steps__step--active">1 шаг</div>
-					<div class="steps__step">2 шаг</div>
-					<div class="steps__step">3 шаг</div>
-				</div>
-			</div>
-		</div>
-	
-		<div class="choise-car">
+		<div class="choise-car col col-6">
 			<div class="choise-car__inner inner">
-				<h2 class="choise-car__title">Какой у вас автомобиль?</h2>
-	
+				
 				<div class="choise-car__block">
 					<div class="choise-car__row row">
 						<div class="choise-car__col choise-car__col--inputs col">
 							<div class="choise-car__inputs-block">
-								<div class="choise-car__inputs-block-col col-4 col-md-12">
+								<div class="choise-car__inputs-block-col col-12">
 	
 									<div class="choise-car__for-select select2 select2-choise-car">
 										<select name="brand" data-placeholder="Марка" required>
@@ -43,7 +31,7 @@
 									</div>
 	
 								</div>
-								<div class="choise-car__inputs-block-col col-4 col-md-12">
+								<div class="choise-car__inputs-block-col col-12">
 	
 									<div class="choise-car__for-select select2 select2-choise-car">
 										<select name="model" data-placeholder="Модель" required>
@@ -68,7 +56,7 @@
 									</div>
 	
 								</div>
-								<div class="choise-car__inputs-block-col col-4 col-md-12">
+								<div class="choise-car__inputs-block-col col-12">
 	
 									<div class="choise-car__for-select select2 select2-choise-car">
 										<select name="year" data-placeholder="Год выпуска" required disabled>
@@ -86,18 +74,26 @@
 							</div>
 						</div>
 						<div class="choise-car__col choise-car__col--btn col">
-							<button type="button" class="btn-next" disabled>Далее</button>
+							<button type="button" class="btn-next">Отправить</button>
 						</div>
 	
 						<div class="choise-car__col choise-car__col-agree col col-12">
 							<div class="choise-car__for-checkbox">
-								<input class="choise-car__checkbox" id="agree" type="checkbox" name="agree[]" value="Согласие на дальнейшую коммуникацию" required  data-form-error="Подтвердите согласие на коммуникацию" disabled>
-								<label for="agree" class="choise-car__label-checkbox">
+								<input class="choise-car__checkbox" id="agree_rekla-feed" type="checkbox" name="agree_rekla-feed[]" value="Согласие на дальнейшую коммуникацию" required  data-form-error="Подтвердите согласие на коммуникацию" >
+								<label for="agree_rekla-feed" class="choise-car__label-checkbox">
 									<span class="choise-car__check"></span>
-									<span class="choise-car__check-text">Я соглашаюсь с условиями обработки моих персональных данных и на рекламную коммуникацию. <a href="#insertLink">Подробнее</a></span>
+									<span class="choise-car__check-text">Я соглашаюсь  на <span>рекламную коммуникацию</span> <a href="#insertLink">Подробнее</a></span>
+								</label>
+							</div>
+							<div class="choise-car__for-checkbox">
+								<input class="choise-car__checkbox" id="agree_persdata-feed" type="checkbox" name="agree_persdata-feed[]" value="Согласие на обработку персональных данных" required  data-form-error="Подтвердите согласие на обработку персональных данных" >
+								<label for="agree_persdata-feed" class="choise-car__label-checkbox">
+									<span class="choise-car__check"></span>
+									<span class="choise-car__check-text">Я соглашаюсь на <span>обработки моих персональных данных</span> <a href="#insertLink">Подробнее</a></span>
 								</label>
 							</div>
 						</div>
+						
 	
 					</div>
 				</div>
@@ -105,4 +101,7 @@
 		</div>
 	
 	</form>
+	
+</div>
+	
 </section>

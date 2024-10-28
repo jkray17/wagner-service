@@ -169,8 +169,15 @@ $(document).ready(function () {
     // setTimeout(()=>{
     //     PopUpShow(null, `<a href="#succes-send"></a>`);
     // }, 300);
+    
+    // Выпадающий список марок
+    document.querySelector('.icon-menu').addEventListener('click', function () {
+        document.querySelector('.service-marks__icons').classList.toggle('show');
+        document.querySelector('.menu-open').classList.toggle('show');
+        document.querySelector('.menu-close').classList.toggle('show');
+    }) 
 
-})
+}) 
 
 /*Полифилы для ie*/
 if (!Element.prototype.matches) {

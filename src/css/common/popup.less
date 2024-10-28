@@ -25,7 +25,8 @@
         max-width : @inner;
         max-height: calc(100vh - 150px);
 
-        background: transparent;
+        background: linear-gradient(99.62deg, #F2F2F2 17.01%, #E0E0E0 95.06%);
+
         padding   : 0;       
 
         @media screen and (max-width: @inner) {
@@ -51,7 +52,7 @@
         }
 
         &--support {
-            max-width: 780px;
+            max-width: 590px;
 
             @media screen and (max-width: @ipad) {
                 max-width: 470px;
@@ -68,8 +69,20 @@
 
         padding: 60px;
 
-        background: #1A252F;
+        // background: #1A252F;
         padding: 80px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 43%;
+            left: 14%;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, #EC2830, #e4e4e4, transparent);
+            filter: blur(114px);
+            z-index: -1;
+        }
 
         @media screen and (max-width: @ipad) {
             padding: 80px 40px;

@@ -1,0 +1,99 @@
+.feedback {
+	padding: 40px 0px;
+	background-color: #1A252F;
+
+	@media screen and (max-width: @ipad) {
+		padding: 40px 20px;
+	}
+
+	& form {
+		justify-content: space-between;
+		align-items: center;
+		@media screen and (max-width: @ipad) {
+			flex-direction: column;
+			justify-content: center;
+			gap: 20px;
+		}
+	}
+
+	& .choise-car {
+		padding: 0;
+		z-index: 2;
+		&__row {
+			flex-direction: column;
+			align-items: start;
+		}
+		&__for-select {
+			width: 379px;
+			@media screen and (max-width: @ipad) {	
+				width: 320px;
+			}
+		}
+		&__col--btn {
+			width: 100%;
+			margin-top: 10px;
+			@media screen and (max-width: @ipad) {
+				padding-top: 10px;
+			}
+		}
+		& .btn-next {
+			width: 379px;
+		}
+	}
+
+	& .choise-car__inputs-block {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	& .choise-car__check-text {
+		font-style: 14px;
+		font-weight: 400;
+		line-height: 18px;
+		color: #B2B2B2;
+		margin-bottom: 8px;
+
+		& span {
+			color: #fff;
+			text-decoration: underline;
+			}
+	}
+
+	& .choise-car__check {
+		border: 1.6px solid #f2f2f2;
+	}
+	
+	&__block-txt {
+		position: relative;
+		width: 478px;
+		// height: 208px;
+		font-size: 40px;
+		font-weight: 400;
+		line-height: 52px;
+		color: #fff;
+		z-index: 1;
+
+		&::before {
+			content: '';
+			width: 251px;
+			height: 251px;
+			position: absolute;
+			top: 0;
+			left: 24%;
+			z-index: -1;
+			// color: red;
+			background: radial-gradient(circle, #EC2830, black, transparent);
+			filter: blur(94px);
+			// backdrop-filter: blur(50px);
+		}
+		& span {
+			color: #EC2830;
+			font-weight: 700;
+		}
+		@media screen and (max-width: @mob) {
+			font-size: 28px;
+			line-height: 36px;
+		}
+	}
+}

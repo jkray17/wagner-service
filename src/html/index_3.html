@@ -4,25 +4,7 @@
 @@include('./main/header.html',{
 "classmain": "main--first-step"
 })
-
-<section class="promo">
-    <div class="promo__inner inner">
-        <div class="promo__grid">
-            <div class="promo__item promo__item--title ">
-                <h1 class="promo__title">Запись на сервис <br> за <span>3 минуты online</span></h1>
-            </div>
-            <div class="promo__item promo__item--img">
-                <img src="./images/clock-promo.png" alt="Clock" class="promo__photo-bg">
-            </div>
-            <div class="promo__btns-block">
-                <a href="#steps" class="btn-sign-up js-link-anchor">Записаться</a>
-            </div>
-            <div class="promo__item promo__item--brands">
-                <img src="./images/brands-line.png" alt="Brands" class="promo__brands">
-            </div>
-        </div>
-    </div>
-</section>
+@@include('./main/promo.html',{})
 
 <form action="" method="post">
 
@@ -97,10 +79,17 @@
 
                     <div class="choise-car__col choise-car__col-agree col col-12">
                         <div class="choise-car__for-checkbox">
-                            <input class="choise-car__checkbox" id="agree" type="checkbox" name="agree[]" value="Согласие на дальнейшую коммуникацию" required  data-form-error="Подтвердите согласие на коммуникацию">
-                            <label for="agree" class="choise-car__label-checkbox">
+                            <input class="choise-car__checkbox" id="agree_rekla" type="checkbox" name="agree_rekla[]" value="Согласие на дальнейшую коммуникацию" required  data-form-error="Подтвердите согласие на коммуникацию" checked>
+                            <label for="agree_rekla" class="choise-car__label-checkbox">
                                 <span class="choise-car__check"></span>
-                                <span class="choise-car__check-text">Я соглашаюсь с условиями обработки моих персональных данных и на рекламную коммуникацию. <a href="#insertLink">Подробнее</a></span>
+                                <span class="choise-car__check-text">Я соглашаюсь  на <span>рекламную коммуникацию</span> </span>
+                            </label>
+                        </div>
+                        <div class="choise-car__for-checkbox">
+                            <input class="choise-car__checkbox" id="agree_persdata" type="checkbox" name="agree_persdata[]" value="Согласие на обработку персональных данных" required  data-form-error="Подтвердите согласие на обработку персональных данных" checked>
+                            <label for="agree_persdata" class="choise-car__label-checkbox">
+                                <span class="choise-car__check"></span>
+                                <span class="choise-car__check-text">Я соглашаюсь на <span>обработки моих персональных данных</span> </span>
                             </label>
                         </div>
                     </div>
@@ -181,4 +170,5 @@
     </div>
 </section>
 
+@@include('./main/feedback.html')
 @@include('./main/footer.html')

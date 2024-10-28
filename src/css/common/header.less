@@ -78,17 +78,17 @@
         display: inline-block;
         padding-top: 4px;
         font-size: 15px;             
-        // color:red;
-
+        text-align: right;
         @media screen and (max-width: @ipad) {
             padding-top: 4px;
+            text-align: left;
         }        
     }
 
     &__phone {
         position: absolute;
         top: 0;
-        right: 0;
+        right: 20px;
         display: block;
         width: 70px;
         height: 70px;
@@ -122,27 +122,72 @@
     }
     &__bottom {
         background: #F9F9F9;
+        margin-top: 20px;
 
     }
 
 }
 
 .service-marks {
-    display: flex;
-    justify-content: stretch;
-    align-items: center;
-    padding: 10px 40px 10px 40px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    padding: 10px 0;
 
     &__icons {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 14px;
         width: 100%;
         & > * {
             align-self: center;
         }
+        // @media screen and (max-width: @ipad) {
+        //     // display: none;
+        //     order: 3;
+        // }
     }
-    & .header__text {
-        flex: 1 0 200px;
+    
+}
+
+@media screen and (max-width: @ipad) {
+    .service-marks {
+        grid-template-columns: 1fr 1fr; /* Две колонки для блоков 1 и 3 */
+        grid-template-rows: auto auto;  /* Две строки */
+        grid-template-areas: 
+            "block1 block3"  /* Блок 1 и блок 3 в первой строке */
+            "block2 block2"; /* Блок 2 на второй строке */
+    }
+
+    .header__text {
+        grid-area: block1;
+    }
+
+    .service-marks__icons {
+        grid-area: block2;
+        display: none;
+    }
+
+    .service-marks__icons.show {
+        display: block;
+    }
+
+    .icon-menu {
+        grid-area: block3;
+    }
+}
+
+.icon-menu {
+    display: none;
+    @media screen and (max-width: @ipad) {
+        display: block;
+        text-align: right;
+    }
+}
+.menu-open, .menu-close {
+    display: none;
+    &.show {
+        display: block;
     }
 }

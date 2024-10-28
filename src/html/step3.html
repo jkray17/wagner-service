@@ -4,25 +4,7 @@
 @@include('./main/header.html',{
 "classmain": "main--second-step"
 })
-
-<section class="promo">
-    <div class="promo__inner inner">
-        <div class="promo__grid">
-            <div class="promo__item promo__item--title ">
-                <h1 class="promo__title">Запись на сервис <br> за <span>3 минуты online</span></h1>
-            </div>
-            <div class="promo__item promo__item--img">
-                <img src="./images/clock-promo.png" alt="Clock" class="promo__photo-bg">
-            </div>
-            <div class="promo__btns-block">
-                <a href="#steps" class="btn-sign-up js-link-anchor">Записаться</a>
-            </div>
-            <div class="promo__item promo__item--brands">
-                <img src="./images/brands-line.png" alt="Brands" class="promo__brands">
-            </div>
-        </div>
-    </div>
-</section>
+@@include('./main/promo.html',{})
 
 <form action="" method="post">
 
@@ -64,5 +46,5 @@
 
 </form>
 
-
+@@include('./main/feedback.html')
 @@include('./main/footer.html')
